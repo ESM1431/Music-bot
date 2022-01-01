@@ -10,7 +10,7 @@ const DisTube = require('distube')
 
 
 
-Client.distube = new DisTube(Client, { searchSongs: false, emitNewSongOnly: false });
+Client.distube = new DisTube(Client, { searchSongs: true, emitNewSongOnly: true });
 
 Client.distube
 
