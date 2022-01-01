@@ -32,7 +32,7 @@ Client.distube
 })
 .on("playList", (message, queue, playlist, song) => {
 
-    message.channel.send(`Play \`${playlist.name}\` playlist (${playlist.songs.length} songs).\nRequested by: ${song.user}\nNow playing \`${song.name}\` - \`${song.formattedDuration}\``)
+    message.channel.send(`p \`${playlist.name}\` playlist (${playlist.songs.length} songs).\nRequested by: ${song.user}\nNow playing \`${song.name}\` - \`${song.formattedDuration}\``)
 })
 .on("addList", (message, queue, playlist) => message.channel.send(
     `Added \`${playlist.name}\` playlist (${playlist.songs.length} songs) to queue`
@@ -112,7 +112,7 @@ Client.on("message", async message => {
 
     let prefixes = await db.fetch(`prefix_${message.guild.id}`);
     if(prefixes == null) {
-      prefix = "=" // default prefix if no prefix set for this guild
+      prefix = "!" // default prefix if no prefix set for this guild
     } else {
       prefix = prefixes;
     }
